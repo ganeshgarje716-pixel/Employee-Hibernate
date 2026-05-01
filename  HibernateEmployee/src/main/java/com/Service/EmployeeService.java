@@ -21,6 +21,13 @@ public class EmployeeService {
 		
 		return dao.getEmployee(id);
 	}
+	
+	
+	
+	public String update(Employee employee) {
+		
+		return dao.updateById(employee);	
+	}
 		
 		
 	

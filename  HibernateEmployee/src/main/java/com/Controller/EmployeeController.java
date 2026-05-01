@@ -26,6 +26,13 @@ public class EmployeeController {
 	
 	
 	
+	public String update(Employee employee) {
+		
+		return service.update(employee);
+	}
+	
+	
+	
 	
 	
 	

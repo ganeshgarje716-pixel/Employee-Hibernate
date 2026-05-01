@@ -47,6 +47,34 @@ public class EmployeeDao {
 		
 		
 		
+		public String updateById(Employee employee) {
+			
+			Session session = sf.openSession();
+			
+			Transaction tr = session.beginTransaction();
+			
+			Employee existing = session.get(Employee.class, employee.getId());
+			
+			existing.setName(employee.getName());
+			existing.setEmail(employee.getEmail());
+			existing.setMobileNo(employee.getMobileNo());
+			existing.setSalary(employee.getSalary());
+			existing.setDep(employee.getDep());
+			existing.setGender(employee.getGender());
+			existing.setCity(employee.getCity());
+			
+			session.update(existing);
+			
+			tr.commit();
+			
+			session.close();
+			
+			return "Employee Update";
+		}
+		
+		
+		
+		
 		
 		
 		

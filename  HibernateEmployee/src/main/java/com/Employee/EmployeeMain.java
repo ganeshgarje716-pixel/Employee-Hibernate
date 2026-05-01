@@ -19,7 +19,10 @@ public class EmployeeMain {
 //		System.out.println(controller.insert(new Employee(5, "Ram", "ram@gmail.com", "9078563412", 55000, "IT", "Male", "Mumbai")));
 		
 		
-		System.out.println(controller.get(1));
+//		System.out.println(controller.get(1));
+		
+		
+		System.out.println(controller.update(new Employee(1, "Radha", "radha@gmail.com", "1234567890", 70000, "HR", "Female", "Hydrabad")));
 		
 		
 		
