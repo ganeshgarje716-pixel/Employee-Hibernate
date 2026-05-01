@@ -1,5 +1,55 @@
 package com.Dao;
 
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.Config.HibernateConfig;
+import com.Entity.Employee;
+
 public class EmployeeDao {
 
+	
+	
+		
+		SessionFactory sf=HibernateConfig.getSessionFactory();
+	
+		
+		
+		public Employee insertEmployee(Employee employee) {
+			
+			Session session = sf.openSession();
+			
+			Transaction tr = session.beginTransaction();
+			
+			session.save(employee);
+			
+			tr.commit();
+			
+			session.close();
+			
+			return employee;
+		}
+		
+		
+		
+		public Employee getEmployee(int id) {
+			
+			
+			Session session = sf.openSession();
+			
+			Employee employee = session.get(Employee.class, id);
+			
+			return employee;
+		}
+		
+		
+		
+		
+		
+		
+		
+	
+	
 }
