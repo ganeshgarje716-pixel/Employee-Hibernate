@@ -1,6 +1,8 @@
 package com.Dao;
 
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -74,6 +76,14 @@ public class EmployeeDao {
 		
 		
 		
+		public List<Employee> getAllEmployees() {
+			
+			Session session = sf.openSession();
+			
+			List<Employee> employees = session.createQuery("from Employee").list();
+			
+			return employees;
+		}
 		
 		
 		

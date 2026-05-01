@@ -1,5 +1,7 @@
 package com.Controller;
 
+import java.util.List;
+
 import com.Entity.Employee;
 import com.Service.EmployeeService;
 
@@ -29,6 +31,13 @@ public class EmployeeController {
 	public String update(Employee employee) {
 		
 		return service.update(employee);
+	}
+	
+	
+	
+	public List<Employee> getAll(){
+		
+		return service.getAll();
 	}
 	
 	

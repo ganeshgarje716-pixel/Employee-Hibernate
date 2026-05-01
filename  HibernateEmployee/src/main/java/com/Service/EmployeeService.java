@@ -1,5 +1,7 @@
 package com.Service;
 
+import java.util.List;
+
 import com.Dao.EmployeeDao;
 import com.Entity.Employee;
 
@@ -27,6 +29,13 @@ public class EmployeeService {
 	public String update(Employee employee) {
 		
 		return dao.updateById(employee);	
+	}
+	
+	
+	
+	public List<Employee> getAll(){
+		
+		return dao.getAllEmployees();
 	}
 		
 		
