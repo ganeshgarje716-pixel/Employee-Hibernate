@@ -25,10 +25,13 @@ public class EmployeeMain {
 //		System.out.println(controller.update(new Employee(1, "Radha", "radha@gmail.com", "1234567890", 70000, "HR", "Female", "Hydrabad")));
 		
 		
-		for (Employee all : controller.getAll()) {
-			
-			System.out.println(all);
-		}
+//		for (Employee all : controller.getAll()) {
+//			
+//			System.out.println(all);
+//		}
+		
+		
+		System.out.println(controller.delete(52));
 		
 		
 		

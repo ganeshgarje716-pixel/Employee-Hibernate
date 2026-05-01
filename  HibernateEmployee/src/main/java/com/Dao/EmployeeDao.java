@@ -87,6 +87,25 @@ public class EmployeeDao {
 		
 		
 		
+		public String deleteEmployee(int id) {
+			
+			Session session = sf.openSession();
+			
+			Transaction tr = session.beginTransaction();
+			
+			Employee employee = session.get(Employee.class, id);
+			
+			session.delete(employee);
+			
+			tr.commit();
+			
+			session.close();
+			
+			return "Employee Delete";
+		}
+		
+		
+		
 		
 	
 	

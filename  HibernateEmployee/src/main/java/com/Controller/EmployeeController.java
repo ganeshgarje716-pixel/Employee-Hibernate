@@ -42,6 +42,13 @@ public class EmployeeController {
 	
 	
 	
+	public String delete(int id) {
+		
+		return service.delete(id);
+	}
+	
+	
+	
 	
 	
 	
